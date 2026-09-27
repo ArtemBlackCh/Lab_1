@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 3 - Форма</title>
+</head>
+<body>
+
+  <p>
+    <b>Черненко Артем Євгенійович</b><br>
+    Група КН-22<br>
+    Варіант № 16
+  </p>
+  <p><a href="../index.html">На головну сторінку</a></p>
+  <hr>
+
+  <h1>Завдання 3. Сторінка з формою</h1>
+
+  <p>
+    Опис завдання: розробити форму для введення інформації про тварину до
+    бази даних. Дані згруповано у дві категорії: дані про тварину (кличка,
+    тип, дата народження, колір) та дані про власника тварини (ПІБ, телефон,
+    електронна адреса, вік - ціле число від 18 до 100).
+  </p>
+
+  <form action="" method="post">
+
+    <fieldset>
+      <legend>Дані про тварину</legend>
+
+      <p>
+        <label for="petName">Кличка тварини:</label><br>
+        <input type="text" id="petName" name="petName" placeholder="Наприклад: Барсик" required>
+      </p>
+
+      <p>
+        <label for="petType">Тип тварини:</label><br>
+        <select id="petType" name="petType">
+          <option value="" disabled selected>-- оберіть тип --</option>
+          <option value="dog">Собака</option>
+          <option value="cat">Кішка</option>
+          <option value="bird">Птах</option>
+          <option value="rodent">Гризун</option>
+          <option value="fish">Риба</option>
+          <option value="other">Інше</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="petBirth">Дата народження:</label><br>
+        <input type="date" id="petBirth" name="petBirth" required>
+      </p>
+
+      <p>
+        <label for="petColor">Колір:</label><br>
+        <input type="color" id="petColor" name="petColor" value="#8B4513" required>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Дані про власника тварини</legend>
+
+      <p>
+        <label for="ownerName">ПІБ власника:</label><br>
+        <input type="text" id="ownerName" name="ownerName" placeholder="Прізвище Ім'я По батькові" required>
+      </p>
+
+      <p>
+        <label for="ownerPhone">Телефон:</label><br>
+        <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="+380 ** *** ** **" required>
+      </p>
+
+      <p>
+        <label for="ownerEmail">Електронна адреса:</label><br>
+        <input type="email" id="ownerEmail" name="ownerEmail" placeholder="name@example.com" required >
+      </p>
+
+      <p>
+        <label for="ownerAge">Вік:</label><br>
+        <input type="number" id="ownerAge" name="ownerAge" min="18" max="100" placeholder="від 18 до 100" required>
+      </p>
+    </fieldset>
+
+    <p>
+      <button type="submit">Відправити дані</button>
+    </p>
+
+  </form>
+
+  <p><a href="../index.html">На головну сторінку</a></p>
+
+</body>
+</html>
